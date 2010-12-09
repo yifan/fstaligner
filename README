@@ -1,0 +1,7 @@
+Text Alignment w/ openFst
+=========================
+
+This is an example how to use openFst to align recognition
+hypotheis to reference text, and calculate WER (Word Error
+Rate).
+
