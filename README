@@ -5,3 +5,8 @@ This is an example how to use openFst to align recognition
 hypotheis to reference text, and calculate WER (Word Error
 Rate).
 
+How it works is to construct a fst network from reference
+text with the option to all possible insertion, deletion
+and substitution errors, compose with hypothesis fst, it
+can be either a one best or lattice network, the shortest
+path of the composition is the alignment.
