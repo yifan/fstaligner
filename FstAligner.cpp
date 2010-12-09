@@ -73,6 +73,8 @@ void FstAligner::align(const FstAlignOption & option,
 										option.delCost, i));
 		refFst.AddArc(i-1, fst::StdArc(symbol.Find(option.symOov), symbol.Find(refLoader.getToken(i-1)),
 										option.subCost, i));
+		refFst.AddArc(i, fst::StdArc(symbol.Find(option.symOov), symbol.Find(option.symIns),
+										option.insCost, i));
 	}
 
 	fst::ArcSort(&hypFst, fst::StdOLabelCompare());
