@@ -1,12 +1,11 @@
 
 all: fstalign
 
-CXXFLAGS = -msse -msse2 -Wall -I.. \
-		             -fPIC -stdlib=libstdc++
-OPENFSTLIBS=-lopenfst
+CXXFLAGS = -msse -msse2 
+OPENFSTLIBS=-lfstscript -lfst
 
-LDFLAGS = -rdynamic $(OPENFSTLDFLAGS)
-LDLIBS = $(EXTRA_LDLIBS) $(OPENFSTLIBS) -lm -lpthread -ldl
+LDFLAGS = $(OPENFSTLDFLAGS)
+LDLIBS = $(EXTRA_LDLIBS) $(OPENFSTLIBS) -lm -ldl
 CC = g++
 CXX = g++
 AR = ar
