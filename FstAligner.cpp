@@ -26,7 +26,7 @@ FstAligner::~FstAligner() {
 void drawFstToFile(fst::StdVectorFst &fstToDraw, const fst::SymbolTable &symbol, const std::string &name) {
 	std::ofstream stream(name.c_str());
 	if (stream.is_open()) {
-		fst::script::FstClass object(&fstToDraw);
+		fst::script::FstClass object(fstToDraw);
 		fst::script::DrawFst(object, &symbol, &symbol, 0, false,
 							name, 8.5, 11, false, false, 0.40, 0.25, 14, 5,
 							false, &stream, name);
